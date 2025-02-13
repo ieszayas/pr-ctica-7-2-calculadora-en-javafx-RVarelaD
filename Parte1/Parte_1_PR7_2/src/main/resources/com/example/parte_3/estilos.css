@@ -1,0 +1,24 @@
+.label {
+    -fx-font-size: 32px;
+    -fx-padding: 10px;
+    -fx-background-color: #FAD7A0;
+    -fx-min-width: 200px;
+}
+
+.button {
+    -fx-font-size: 20px;
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #A9DFBF;
+}
+
+.button:hover {
+    -fx-background-color: #7DCEA0;
+}
+
+.grid-pane {
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+    -fx-padding: 10px;
+}
