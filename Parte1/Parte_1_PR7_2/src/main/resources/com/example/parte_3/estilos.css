@@ -1,24 +1,133 @@
-.label {
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo de la calculadora */
+VBox {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px; /* Aumenté el ancho de la calculadora */
+    margin: auto;
+}
+
+/* Pantalla (display) */
+#display {
     -fx-font-size: 32px;
+    -fx-alignment: center;
     -fx-padding: 10px;
-    -fx-background-color: #FAD7A0;
-    -fx-min-width: 200px;
+    -fx-background-color: #f7f7f7;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 2px;
 }
 
-.button {
-    -fx-font-size: 20px;
-    -fx-min-width: 50px;
-    -fx-min-height: 50px;
-    -fx-background-radius: 10px;
-    -fx-background-color: #A9DFBF;
+/* Espaciado entre los botones */
+HBox {
+    spacing: 10px;
+    margin-bottom: 15px;
 }
 
-.button:hover {
-    -fx-background-color: #7DCEA0;
-}
-
-.grid-pane {
-    -fx-hgap: 10px;
-    -fx-vgap: 10px;
+/* Botones comunes */
+Button {
+    -fx-font-size: 14px;
     -fx-padding: 10px;
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333;
+    -fx-border-radius: 8px;
+    -fx-border-color: #ddd;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
+}
+
+/* Botones con operaciones (más destacados) */
+Button[text="+"], Button[text="-"], Button[text="*"], Button[text="/"], Button[text="="] {
+    -fx-background-color: #f9b230;
+    -fx-text-fill: white;
+}
+
+Button[text="+"]:hover, Button[text="-"]:hover, Button[text="*"]:hover, Button[text="/"]:hover, Button[text="="]:hover {
+    -fx-background-color: #f79c23;
+}
+
+/* Botones de memoria */
+Button[text="M+"], Button[text="MC"] {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+Button[text="M+"].hover, Button[text="MC"].hover {
+    -fx-background-color: #45a049;
+}
+
+/* Botón de borrar (C) */
+Button[text="C"] {
+    -fx-background-color: #ff4d4d;
+    -fx-text-fill: white;
+}
+
+Button[text="C"]:hover {
+    -fx-background-color: #ff1a1a;
+}
+
+/* Botón de cambio de signo (±) */
+Button[text="±"] {
+    -fx-background-color: #d9d9d9;
+    -fx-text-fill: #333;
+}
+
+Button[text="±"]:hover {
+    -fx-background-color: #b3b3b3;
+}
+
+/* Botón de punto decimal (.) */
+Button[text="."] {
+    -fx-background-color: #d9d9d9;
+    -fx-text-fill: #333;
+}
+
+Button[text="."]:hover {
+    -fx-background-color: #b3b3b3;
+}
+
+/* Botón de número 0 */
+Button[text="0"] {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333;
+}
+
+Button[text="0"]:hover {
+    -fx-background-color: #c7c7c7;
+}
+
+/* Estilos de enfoque (foco) en botones */
+Button:focused {
+    -fx-border-color: #f9b230;
+    -fx-box-shadow: none; /* Eliminamos cualquier sombra de enfoque */
+}
+
+/* Transiciones para botones al interactuar */
+Button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    VBox {
+        width: 90%;
+    }
+
+    Button {
+        -fx-pref-width: 60px;
+        -fx-pref-height: 60px;
+    }
 }

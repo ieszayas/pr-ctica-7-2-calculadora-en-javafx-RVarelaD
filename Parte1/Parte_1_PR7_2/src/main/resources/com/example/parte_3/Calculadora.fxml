@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.parte_3.controladorCalc"
+      stylesheets="@estilos.css"> <!-- Aquí se vincula el archivo CSS -->
+    <Label fx:id="display" text="0" style="-fx-font-size: 32px; -fx-alignment: center; -fx-padding: 10px;" />
+
+    <HBox spacing="5">
+        <Button text="M+" onAction="#handleMemoryAdd"/>
+        <Button text="MC" onAction="#handleMemoryClear"/>
+        <Button text="C" onAction="#handleClear"/>
+        <Button text="/" onAction="#handleOperator"/>
+    </HBox>
+
+    <HBox spacing="5">
+        <Button text="7" onAction="#handleNumber"/>
+        <Button text="8" onAction="#handleNumber"/>
+        <Button text="9" onAction="#handleNumber"/>
+        <Button text="*" onAction="#handleOperator"/>
+    </HBox>
+
+    <HBox spacing="5">
+        <Button text="4" onAction="#handleNumber"/>
+        <Button text="5" onAction="#handleNumber"/>
+        <Button text="6" onAction="#handleNumber"/>
+        <Button text="+" onAction="#handleOperator"/>
+    </HBox>
+
+    <HBox spacing="5">
+        <Button text="1" onAction="#handleNumber"/>
+        <Button text="2" onAction="#handleNumber"/>
+        <Button text="3" onAction="#handleNumber"/>
+        <Button text="-" onAction="#handleOperator"/>
+    </HBox>
+
+    <HBox spacing="5">
+        <Button text="0" onAction="#handleNumber"/>
+        <Button text="." onAction="#handleDecimal"/>
+        <Button text="±" onAction="#handleSignChange"/>
+        <Button text="=" onAction="#handleEquals"/>
+    </HBox>
+</VBox>
