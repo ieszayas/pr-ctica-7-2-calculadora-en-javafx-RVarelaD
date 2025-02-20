@@ -28,6 +28,7 @@ public class Main_App extends Application {
             // Establecer la escena y el título de la ventana
             primaryStage.setTitle("Calculadora");
             primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
             primaryStage.show();
 
         } catch (Exception e) {
